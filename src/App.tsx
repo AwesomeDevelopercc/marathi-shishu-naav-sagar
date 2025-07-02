@@ -8,6 +8,9 @@ import Index from "./pages/Index";
 import NamesByAlphabet from "./pages/NamesByAlphabet";
 import AlphabetNames from "./pages/AlphabetNames";
 import NameDetail from "./pages/NameDetail";
+import PopularNames from "./pages/PopularNames";
+import GenderWise from "./pages/GenderWise";
+import Favorites from "./pages/Favorites";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
@@ -27,6 +30,9 @@ const App = () => (
           <Route path="/names-by-alphabet" element={<NamesByAlphabet />} />
           <Route path="/alphabet/:letter" element={<AlphabetNames />} />
           <Route path="/name/:id" element={<NameDetail />} />
+          <Route path="/popular-names" element={<PopularNames />} />
+          <Route path="/gender-wise" element={<GenderWise />} />
+          <Route path="/favorites" element={<Favorites />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
