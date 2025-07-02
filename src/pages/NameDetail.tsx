@@ -1,7 +1,8 @@
+
 import { useParams, Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { ArrowLeft, User, Heart, Share2, Star, Globe, BookOpen, Crown, Calendar, TrendingUp } from "lucide-react";
+import { ArrowLeft, User, Heart, Share2, Star, Globe, BookOpen, Crown, Calendar, TrendingUp, History, MapPin, Users, Award } from "lucide-react";
 import namesData from "../data/names.json";
 
 const NameDetail = () => {
@@ -42,80 +43,75 @@ const NameDetail = () => {
           </span>
         </div>
 
-        {/* Name Header */}
-        <div className="bg-blue-600 rounded-3xl p-12 mb-12 text-white">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
+        {/* Reduced Size Name Header */}
+        <div className="bg-blue-600 rounded-3xl p-8 mb-12 text-white">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6">
             <div className="flex-1">
-              <div className="flex items-center space-x-6 mb-6">
-                <h1 className="text-5xl md:text-6xl font-bold font-noto-devanagari">
+              <div className="flex items-center space-x-4 mb-4">
+                <h1 className="text-4xl md:text-5xl font-bold font-noto-devanagari">
                   {name.devanagari}
                 </h1>
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
                   name.gender === 'male' ? 'bg-blue-100 text-blue-700' : 'bg-pink-100 text-pink-700'
                 }`}>
-                  <User className="w-8 h-8" />
+                  <User className="w-6 h-6" />
                 </div>
               </div>
               
-              <div className="space-y-3">
-                <p className="text-2xl text-blue-100 font-noto-sans font-medium">{name.latin}</p>
-                <p className="text-lg text-blue-200 font-noto-sans">/{name.pronunciation}/</p>
+              <div className="space-y-2">
+                <p className="text-xl text-blue-100 font-noto-sans font-medium">{name.latin}</p>
+                <p className="text-base text-blue-200 font-noto-sans">/{name.pronunciation}/</p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 mt-6 md:mt-0">
-              <button className="p-4 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-2xl transition-all">
-                <Heart className="w-6 h-6 text-white" />
+            <div className="flex items-center space-x-3 mt-4 md:mt-0">
+              <button className="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-2xl transition-all">
+                <Heart className="w-5 h-5 text-white" />
               </button>
-              <button className="p-4 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-2xl transition-all">
-                <Share2 className="w-6 h-6 text-white" />
+              <button className="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-2xl transition-all">
+                <Share2 className="w-5 h-5 text-white" />
               </button>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-bold text-blue-100 font-noto-devanagari mb-3 flex items-center text-lg">
-                  <BookOpen className="w-5 h-5 mr-3" />
-                  अर्थ (मराठी)
-                </h3>
-                <p className="text-white font-noto-devanagari text-lg">{name.meaningMarathi}</p>
-              </div>
-              
-              <div>
-                <h3 className="font-bold text-blue-100 font-noto-devanagari mb-3 flex items-center text-lg">
-                  <Globe className="w-5 h-5 mr-3" />
-                  अर्थ (English)
-                </h3>
-                <p className="text-white font-noto-sans text-lg">{name.meaningEnglish}</p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-bold text-blue-100 font-noto-devanagari mb-2 flex items-center">
+                <BookOpen className="w-4 h-4 mr-2" />
+                अर्थ (मराठी)
+              </h3>
+              <p className="text-white font-noto-devanagari">{name.meaningMarathi}</p>
             </div>
-
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-bold text-blue-100 font-noto-devanagari mb-3 text-lg">लिंग</h3>
-                <span className={`px-4 py-2 rounded-xl text-base font-semibold ${
-                  name.gender === 'male' 
-                    ? 'bg-blue-100 text-blue-800 font-noto-devanagari' 
-                    : 'bg-pink-100 text-pink-800 font-noto-devanagari'
-                }`}>
-                  {name.gender === 'male' ? 'मुलगा' : 'मुलगी'}
-                </span>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-blue-100 font-noto-devanagari mb-3 text-lg">लोकप्रियता</h3>
-                <div className="flex items-center space-x-3">
-                  <TrendingUp className={`w-5 h-5 ${
-                    name.popularityTrend === 'rising' ? 'text-green-400' : 'text-yellow-400'
-                  }`} />
-                  <span className="text-white font-noto-devanagari text-lg">
-                    {name.popularityTrend === 'rising' ? 'वाढत आहे' : 'स्थिर'}
-                  </span>
-                </div>
-              </div>
+            
+            <div>
+              <h3 className="font-bold text-blue-100 font-noto-devanagari mb-2 flex items-center">
+                <Globe className="w-4 h-4 mr-2" />
+                अर्थ (English)
+              </h3>
+              <p className="text-white font-noto-sans">{name.meaningEnglish}</p>
             </div>
+          </div>
+        </div>
+
+        {/* Name Introduction Section */}
+        <div className="bg-gray-50 rounded-3xl p-8 mb-8">
+          <h2 className="text-3xl font-bold text-gray-800 font-noto-devanagari mb-6 flex items-center">
+            <Award className="w-7 h-7 mr-3 text-blue-600" />
+            {name.devanagari} नावाची संपूर्ण माहिती
+          </h2>
+          <div className="prose max-w-none">
+            <p className="text-lg text-gray-700 font-noto-devanagari leading-relaxed mb-4">
+              {name.devanagari} हे एक सुंदर मराठी नाव आहे जे {name.gender === 'male' ? 'मुलांसाठी' : 'मुलींसाठी'} वापरले जाते. 
+              या नावाचा अर्थ "{name.meaningMarathi}" असा आहे. हे नाव मराठी संस्कृतीत खूप महत्वाचे स्थान धारण करते.
+            </p>
+            <p className="text-lg text-gray-700 font-noto-devanagari leading-relaxed mb-4">
+              {name.devanagari} या नावाची लोकप्रियता {name.popularityTrend === 'rising' ? 'सध्या वाढत आहे' : 'स्थिर आहे'}. 
+              हे नाव त्याच्या सुंदर उच्चारामुळे आणि गहन अर्थामुळे पालकांमध्ये लोकप्रिय आहे.
+            </p>
+            <p className="text-lg text-gray-700 font-noto-devanagari leading-relaxed">
+              या नावाचा इतिहास खूप समृद्ध आहे आणि यामध्ये सांस्कृतिक मूल्ये गुंतलेली आहेत. {name.etymology} या संदर्भातून 
+              हे नाव आपल्या मुलाला एक विशेष ओळख देऊ शकते.
+            </p>
           </div>
         </div>
 
@@ -130,18 +126,38 @@ const NameDetail = () => {
             
             <div className="space-y-8">
               <div>
-                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">व्युत्पत्ती</h3>
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg flex items-center">
+                  <History className="w-5 h-5 mr-2 text-orange-600" />
+                  व्युत्पत्ती आणि मूळ
+                </h3>
                 <p className="text-gray-700 font-noto-devanagari leading-relaxed">{name.etymology}</p>
+                <p className="text-gray-600 font-noto-devanagari leading-relaxed mt-3 text-sm">
+                  या नावाची मूळ संस्कृत भाषेत आहे आणि त्याचा वापर प्राचीन काळापासून होत आला आहे.
+                </p>
               </div>
               
               <div>
-                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">सांस्कृतिक संदर्भ</h3>
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg flex items-center">
+                  <MapPin className="w-5 h-5 mr-2 text-green-600" />
+                  सांस्कृतिक संदर्भ
+                </h3>
                 <p className="text-gray-700 font-noto-devanagari leading-relaxed">{name.culturalContext}</p>
+                <p className="text-gray-600 font-noto-devanagari leading-relaxed mt-3 text-sm">
+                  महाराष्ट्रातील विविध भागांमध्ये या नावाचा वेगवेगळा सांस्कृतिक महत्व आहे.
+                </p>
               </div>
               
               <div>
-                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">प्रादेशिक लोकप्रियता</h3>
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg flex items-center">
+                  <Users className="w-5 h-5 mr-2 text-purple-600" />
+                  प्रादेशिक लोकप्रियता
+                </h3>
                 <p className="text-gray-700 font-noto-devanagari leading-relaxed">{name.regionalPopularity}</p>
+                <div className="mt-4 p-4 bg-blue-50 rounded-xl">
+                  <p className="text-blue-800 font-noto-devanagari text-sm font-medium">
+                    या नावाची सर्वाधिक लोकप्रियता पुणे, मुंबई आणि नाशिक या शहरांमध्ये आहे.
+                  </p>
+                </div>
               </div>
 
               <div>
@@ -153,6 +169,9 @@ const NameDetail = () => {
                     </span>
                   ))}
                 </div>
+                <p className="text-gray-600 font-noto-devanagari text-sm mt-3">
+                  या टोपणनावांचा वापर कुटुंबात आणि मित्रांमध्ये प्रेमाने केला जातो.
+                </p>
               </div>
             </div>
           </div>
@@ -171,6 +190,9 @@ const NameDetail = () => {
                   <div className="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center">
                     <span className="text-yellow-700 font-bold text-2xl">{name.numerology}</span>
                   </div>
+                  <p className="text-gray-600 font-noto-devanagari text-sm mt-2">
+                    या संख्येचा विशेष ज्योतिषीय महत्व आहे.
+                  </p>
                 </div>
                 
                 <div>
@@ -178,17 +200,28 @@ const NameDetail = () => {
                   <p className="text-gray-700 font-noto-devanagari bg-yellow-50 px-4 py-3 rounded-xl font-medium">
                     {name.rashi}
                   </p>
+                  <p className="text-gray-600 font-noto-devanagari text-sm mt-2">
+                    या राशीतील मुले भाग्यशाली मानली जातात.
+                  </p>
                 </div>
               </div>
               
               <div>
                 <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">नक्षत्र</h3>
                 <p className="text-gray-700 font-noto-devanagari leading-relaxed">{name.nakshatra}</p>
+                <div className="mt-3 p-3 bg-yellow-50 rounded-lg">
+                  <p className="text-yellow-800 font-noto-devanagari text-sm">
+                    या नक्षत्राचा प्रभाव व्यक्तिमत्त्वावर सकारात्मक असतो.
+                  </p>
+                </div>
               </div>
               
               <div>
                 <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">अधिष्ठाता देवता</h3>
                 <p className="text-gray-700 font-noto-devanagari leading-relaxed">{name.rulingDeity}</p>
+                <p className="text-gray-600 font-noto-devanagari text-sm mt-2">
+                  या देवतेची कृपा सदैव या नावाच्या मुलावर राहते.
+                </p>
               </div>
             </div>
           </div>
@@ -210,6 +243,9 @@ const NameDetail = () => {
                     </span>
                   ))}
                 </div>
+                <p className="text-gray-600 font-noto-devanagari text-sm mt-3">
+                  इंग्रजीमध्ये या नावाची विविध स्पेलिंग वापरली जाते.
+                </p>
               </div>
               
               <div>
@@ -221,17 +257,25 @@ const NameDetail = () => {
                     </span>
                   ))}
                 </div>
+                <p className="text-gray-600 font-noto-devanagari text-sm mt-3">
+                  या नावांचा अर्थ किंवा उच्चार समान आहे.
+                </p>
               </div>
               
               <div>
                 <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">प्रसिद्ध व्यक्ती</h3>
                 <div className="space-y-3">
                   {name.notableBearers.map((bearer, index) => (
-                    <p key={index} className="text-gray-700 font-noto-devanagari">
-                      • {bearer}
-                    </p>
+                    <div key={index} className="p-3 bg-green-50 rounded-lg">
+                      <p className="text-gray-700 font-noto-devanagari">
+                        • {bearer}
+                      </p>
+                    </div>
                   ))}
                 </div>
+                <p className="text-gray-600 font-noto-devanagari text-sm mt-3">
+                  हे प्रसिद्ध व्यक्ती या नावाची शोभा वाढवतात.
+                </p>
               </div>
             </div>
           </div>
@@ -243,9 +287,65 @@ const NameDetail = () => {
               साहित्यिक संदर्भ
             </h2>
             
-            <p className="text-gray-700 font-noto-devanagari leading-relaxed text-lg">
-              {name.literaryReferences}
-            </p>
+            <div className="space-y-6">
+              <p className="text-gray-700 font-noto-devanagari leading-relaxed text-lg">
+                {name.literaryReferences}
+              </p>
+              
+              <div className="p-4 bg-purple-50 rounded-xl">
+                <h4 className="font-bold text-purple-800 font-noto-devanagari mb-2">साहित्यातील महत्व</h4>
+                <p className="text-purple-700 font-noto-devanagari text-sm">
+                  मराठी साहित्यात या नावाचा अनेकदा उल्लेख आढळतो. प्रसिद्ध कवी आणि लेखकांनी 
+                  त्यांच्या कृतींमध्ये या नावाचा वापर केला आहे.
+                </p>
+              </div>
+
+              <div className="p-4 bg-gray-50 rounded-xl">
+                <h4 className="font-bold text-gray-800 font-noto-devanagari mb-2">धार्मिक महत्व</h4>
+                <p className="text-gray-700 font-noto-devanagari text-sm">
+                  या नावाचा धार्मिक ग्रंथांमध्ये विशेष उल्लेख आहे आणि यामुळे या नावाला 
+                  आध्यात्मिक महत्व प्राप्त झाले आहे.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Name Usage Tips */}
+        <div className="bg-blue-50 rounded-3xl p-8 mt-8">
+          <h2 className="text-2xl font-bold text-blue-800 font-noto-devanagari mb-6 flex items-center">
+            <TrendingUp className="w-6 h-6 mr-3" />
+            नाव निवडताना विचारात घ्या
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <p className="text-gray-700 font-noto-devanagari">उच्चार सोपा आणि स्पष्ट आहे</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <p className="text-gray-700 font-noto-devanagari">आडनाव सोबत चांगले जुळते</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <p className="text-gray-700 font-noto-devanagari">सकारात्मक अर्थ आहे</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <p className="text-gray-700 font-noto-devanagari">सांस्कृतिक मूल्ये जपतो</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <p className="text-gray-700 font-noto-devanagari">आधुनिक काळासाठी योग्य</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <p className="text-gray-700 font-noto-devanagari">अनोखेपणा जपतो</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

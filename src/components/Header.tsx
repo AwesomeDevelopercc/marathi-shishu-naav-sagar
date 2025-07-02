@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Search, Menu, Home, BookOpen } from "lucide-react";
+import { Search, Menu, Home, BookOpen, Users, Heart, TrendingUp } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -22,7 +22,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <Link to="/" className="flex items-center text-gray-700 hover:text-blue-600 font-noto-devanagari font-semibold text-lg transition-colors hover:bg-blue-50 px-4 py-2 rounded-xl">
               <Home className="w-5 h-5 mr-2" />
               मुख्य पान
@@ -30,6 +30,18 @@ const Header = () => {
             <Link to="/names-by-alphabet" className="flex items-center text-gray-700 hover:text-blue-600 font-noto-devanagari font-semibold text-lg transition-colors hover:bg-blue-50 px-4 py-2 rounded-xl">
               <BookOpen className="w-5 h-5 mr-2" />
               अक्षरानुसार नावे
+            </Link>
+            <Link to="/popular-names" className="flex items-center text-gray-700 hover:text-blue-600 font-noto-devanagari font-semibold text-lg transition-colors hover:bg-blue-50 px-4 py-2 rounded-xl">
+              <TrendingUp className="w-5 h-5 mr-2" />
+              लोकप्रिय नावे
+            </Link>
+            <Link to="/gender-wise" className="flex items-center text-gray-700 hover:text-blue-600 font-noto-devanagari font-semibold text-lg transition-colors hover:bg-blue-50 px-4 py-2 rounded-xl">
+              <Users className="w-5 h-5 mr-2" />
+              लिंगानुसार नावे
+            </Link>
+            <Link to="/favorites" className="flex items-center text-gray-700 hover:text-blue-600 font-noto-devanagari font-semibold text-lg transition-colors hover:bg-blue-50 px-4 py-2 rounded-xl">
+              <Heart className="w-5 h-5 mr-2" />
+              आवडते नावे
             </Link>
           </nav>
 
@@ -67,6 +79,30 @@ const Header = () => {
               >
                 <BookOpen className="w-5 h-5 mr-3" />
                 अक्षरानुसार नावे
+              </Link>
+              <Link 
+                to="/popular-names" 
+                className="flex items-center text-gray-700 hover:text-blue-600 font-noto-devanagari font-semibold text-lg py-3 px-4 rounded-xl hover:bg-white transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <TrendingUp className="w-5 h-5 mr-3" />
+                लोकप्रिय नावे
+              </Link>
+              <Link 
+                to="/gender-wise" 
+                className="flex items-center text-gray-700 hover:text-blue-600 font-noto-devanagari font-semibold text-lg py-3 px-4 rounded-xl hover:bg-white transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Users className="w-5 h-5 mr-3" />
+                लिंगानुसार नावे
+              </Link>
+              <Link 
+                to="/favorites" 
+                className="flex items-center text-gray-700 hover:text-blue-600 font-noto-devanagari font-semibold text-lg py-3 px-4 rounded-xl hover:bg-white transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Heart className="w-5 h-5 mr-3" />
+                आवडते नावे
               </Link>
             </nav>
           </div>
