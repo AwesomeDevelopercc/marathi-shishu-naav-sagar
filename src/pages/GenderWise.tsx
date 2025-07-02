@@ -1,5 +1,5 @@
-
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NameCard from "../components/NameCard";
@@ -16,6 +16,11 @@ const GenderWise = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>लिंगानुसार मराठी नावे - मुलांची आणि मुलींची नावे | Marathi Baby Names by Gender</title>
+        <meta name="description" content="मराठी मुलांची आणि मुलींची नावे स्वतंत्रपणे पहा. लिंगानुसार वर्गीकृत केलेली मराठी बाळांची नावे अर्थासह." />
+      </Helmet>
+      
       <Header />
       
       <section className="py-20 px-4 bg-blue-600">

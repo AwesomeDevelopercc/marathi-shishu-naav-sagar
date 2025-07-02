@@ -1,4 +1,4 @@
-
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
@@ -27,6 +27,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      <Helmet>
+        <title>संपर्क - मराठी डेली | आम्हाला संपर्क करा | Contact Marathi Daily</title>
+        <meta name="description" content="मराठी डेली शी संपर्क साधा. तुमचे प्रश्न, सूचना किंवा फीडबॅक पाठवा. आम्ही तुमच्या मदतीसाठी उपलब्ध आहोत." />
+      </Helmet>
+      
       <Header />
       
       <div className="container mx-auto px-4 py-12">

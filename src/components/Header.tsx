@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { Search, Menu, Home, BookOpen, Users, Heart, TrendingUp } from "lucide-react";
+import { Menu, Home, BookOpen, Users, Heart, TrendingUp } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -45,12 +44,8 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Search & Mobile Menu */}
+          {/* Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            <button className="p-3 hover:bg-blue-50 rounded-xl transition-colors">
-              <Search className="w-6 h-6 text-gray-600" />
-            </button>
-            
             <button 
               className="md:hidden p-3 hover:bg-blue-50 rounded-xl transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}

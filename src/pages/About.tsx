@@ -1,4 +1,4 @@
-
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Users, Heart, Star, Award } from "lucide-react";
@@ -6,6 +6,11 @@ import { Users, Heart, Star, Award } from "lucide-react";
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      <Helmet>
+        <title>आमच्याबद्दल - मराठी डेली | मराठी बाळांची नावे | About Marathi Daily</title>
+        <meta name="description" content="मराठी डेली बद्दल जाणून घ्या. आम्ही मराठी संस्कृतीतील सुंदर नावांचा संग्रह तयार करतो. आमचे ध्येय आणि सेवा जाणून घ्या." />
+      </Helmet>
+      
       <Header />
       
       <div className="container mx-auto px-4 py-12">

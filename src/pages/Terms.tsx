@@ -1,4 +1,4 @@
-
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { FileText, AlertCircle, Users, Gavel } from "lucide-react";
@@ -6,6 +6,11 @@ import { FileText, AlertCircle, Users, Gavel } from "lucide-react";
 const Terms = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      <Helmet>
+        <title>नियम व अटी - मराठी डेली | Terms and Conditions | Marathi Daily</title>
+        <meta name="description" content="मराठी डेली वेबसाइट वापरण्याच्या नियम व अटी वाचा. वेबसाइटचा योग्य वापर आणि आमच्या सेवांबद्दल संपूर्ण माहिती." />
+      </Helmet>
+      
       <Header />
       
       <div className="container mx-auto px-4 py-12">

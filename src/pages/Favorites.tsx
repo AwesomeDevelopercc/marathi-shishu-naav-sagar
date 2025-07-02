@@ -1,5 +1,5 @@
-
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NameCard from "../components/NameCard";
@@ -20,6 +20,11 @@ const Favorites = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>आवडते मराठी नावे - तुमची पसंतीची मराठी बाळांची नावे | Favorite Marathi Baby Names</title>
+        <meta name="description" content="तुमची आवडती मराठी बाळांची नावे एका ठिकाणी. तुमच्या पसंतीची मुलांची आणि मुलींची नावे सेव्ह करा आणि पुन्हा पहा." />
+      </Helmet>
+      
       <Header />
       
       <section className="py-20 px-4 bg-blue-600">

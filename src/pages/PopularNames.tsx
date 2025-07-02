@@ -1,5 +1,5 @@
-
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NameCard from "../components/NameCard";
@@ -12,6 +12,11 @@ const PopularNames = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>लोकप्रिय मराठी नावे - सर्वाधिक शोधली जाणारी मराठी बाळांची नावे | Popular Marathi Baby Names</title>
+        <meta name="description" content="सर्वाधिक लोकप्रिय मराठी बाळांची नावे. ट्रेंडिंग मुलांची आणि मुलींची नावे अर्थासह. आधुनिक आणि पारंपरिक लोकप्रिय मराठी नावे." />
+      </Helmet>
+      
       <Header />
       
       <section className="py-20 px-4 bg-blue-600">

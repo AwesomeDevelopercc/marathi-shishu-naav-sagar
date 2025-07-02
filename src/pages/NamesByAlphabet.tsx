@@ -1,4 +1,4 @@
-
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
@@ -8,6 +8,11 @@ import namesData from "../data/names.json";
 const NamesByAlphabet = () => {
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>अक्षरानुसार मराठी नावे - मराठी बाळांची नावे अक्षरानुसार | Marathi Baby Names by Alphabet</title>
+        <meta name="description" content="मराठी बाळांची नावे अक्षरानुसार शोधा. अ ते ह सर्व अक्षरांची मुलांची आणि मुलींची नावे अर्थासह. अक्षरानुसार नावांची यादी." />
+      </Helmet>
+      
       <Header />
       
       <div className="container mx-auto px-4 py-16">

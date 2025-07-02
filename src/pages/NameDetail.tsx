@@ -1,5 +1,5 @@
-
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { ArrowLeft, User, Heart, Share2, Star, Globe, BookOpen, Crown, Calendar, TrendingUp, History, MapPin, Users, Award } from "lucide-react";
@@ -25,6 +25,11 @@ const NameDetail = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>{name.devanagari} नावाचे अर्थ, राशी आणि ज्योतिष माहिती | Marathi Baby Names</title>
+        <meta name="description" content={`${name.devanagari} (${name.latin}) नावाचा अर्थ ${name.meaningMarathi}. राशी: ${name.rashi}, नक्षत्र: ${name.nakshatra}. संपूर्ण ज्योतिष माहिती आणि सांस्कृतिक संदर्भ.`} />
+      </Helmet>
+      
       <Header />
       
       <div className="container mx-auto px-4 py-12">
