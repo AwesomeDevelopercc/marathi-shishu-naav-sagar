@@ -11,7 +11,7 @@ const NameDetail = () => {
 
   if (!name) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      <div className="min-h-screen bg-white">
         <Header />
         <div className="container mx-auto px-4 py-12 text-center">
           <h1 className="text-2xl font-bold text-red-500 font-noto-devanagari">
@@ -24,94 +24,94 @@ const NameDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+    <div className="min-h-screen bg-white">
       <Header />
       
       <div className="container mx-auto px-4 py-12">
         {/* Breadcrumb */}
-        <div className="flex items-center mb-8">
+        <div className="flex items-center mb-12">
           <Link 
             to="/"
-            className="flex items-center text-blue-600 hover:text-blue-700 font-noto-devanagari transition-colors"
+            className="flex items-center text-blue-600 hover:text-blue-800 font-noto-devanagari transition-colors bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-xl"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-5 h-5 mr-2" />
             मुख्य पान
           </Link>
-          <span className="mx-3 text-gray-400">/</span>
-          <span className="text-gray-600 font-noto-devanagari">
+          <span className="mx-4 text-gray-400">/</span>
+          <span className="text-gray-600 font-noto-devanagari font-medium">
             {name.devanagari}
           </span>
         </div>
 
         {/* Name Header */}
-        <div className="bg-white rounded-2xl shadow-sm border border-blue-100 p-8 mb-8">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6">
+        <div className="bg-blue-600 rounded-3xl shadow-2xl p-12 mb-12 text-white">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
             <div className="flex-1">
-              <div className="flex items-center space-x-4 mb-4">
-                <h1 className="text-4xl md:text-5xl font-bold text-blue-700 font-noto-devanagari">
+              <div className="flex items-center space-x-6 mb-6">
+                <h1 className="text-5xl md:text-6xl font-bold font-noto-devanagari">
                   {name.devanagari}
                 </h1>
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                  name.gender === 'male' ? 'bg-blue-100 text-blue-600' : 'bg-pink-100 text-pink-600'
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${
+                  name.gender === 'male' ? 'bg-blue-100 text-blue-700' : 'bg-pink-100 text-pink-700'
                 }`}>
-                  <User className="w-6 h-6" />
+                  <User className="w-8 h-8" />
                 </div>
               </div>
               
-              <div className="space-y-2">
-                <p className="text-xl text-gray-600 font-noto-sans">{name.latin}</p>
-                <p className="text-lg text-gray-500 font-noto-sans">/{name.pronunciation}/</p>
+              <div className="space-y-3">
+                <p className="text-2xl text-blue-100 font-noto-sans font-medium">{name.latin}</p>
+                <p className="text-lg text-blue-200 font-noto-sans">/{name.pronunciation}/</p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-3 mt-4 md:mt-0">
-              <button className="p-3 bg-pink-50 hover:bg-pink-100 rounded-xl transition-colors">
-                <Heart className="w-5 h-5 text-pink-500" />
+            <div className="flex items-center space-x-4 mt-6 md:mt-0">
+              <button className="p-4 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-2xl transition-all">
+                <Heart className="w-6 h-6 text-white" />
               </button>
-              <button className="p-3 bg-blue-50 hover:bg-blue-100 rounded-xl transition-colors">
-                <Share2 className="w-5 h-5 text-blue-500" />
+              <button className="p-4 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-2xl transition-all">
+                <Share2 className="w-6 h-6 text-white" />
               </button>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
               <div>
-                <h3 className="font-semibold text-blue-700 font-noto-devanagari mb-2 flex items-center">
-                  <BookOpen className="w-4 h-4 mr-2" />
+                <h3 className="font-bold text-blue-100 font-noto-devanagari mb-3 flex items-center text-lg">
+                  <BookOpen className="w-5 h-5 mr-3" />
                   अर्थ (मराठी)
                 </h3>
-                <p className="text-gray-700 font-noto-devanagari">{name.meaningMarathi}</p>
+                <p className="text-white font-noto-devanagari text-lg">{name.meaningMarathi}</p>
               </div>
               
               <div>
-                <h3 className="font-semibold text-blue-700 font-noto-devanagari mb-2 flex items-center">
-                  <Globe className="w-4 h-4 mr-2" />
+                <h3 className="font-bold text-blue-100 font-noto-devanagari mb-3 flex items-center text-lg">
+                  <Globe className="w-5 h-5 mr-3" />
                   अर्थ (English)
                 </h3>
-                <p className="text-gray-700 font-noto-sans">{name.meaningEnglish}</p>
+                <p className="text-white font-noto-sans text-lg">{name.meaningEnglish}</p>
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
-                <h3 className="font-semibold text-blue-700 font-noto-devanagari mb-2">लिंग</h3>
-                <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                <h3 className="font-bold text-blue-100 font-noto-devanagari mb-3 text-lg">लिंग</h3>
+                <span className={`px-4 py-2 rounded-xl text-base font-semibold ${
                   name.gender === 'male' 
-                    ? 'bg-blue-50 text-blue-600 font-noto-devanagari' 
-                    : 'bg-pink-50 text-pink-600 font-noto-devanagari'
+                    ? 'bg-blue-100 text-blue-800 font-noto-devanagari' 
+                    : 'bg-pink-100 text-pink-800 font-noto-devanagari'
                 }`}>
                   {name.gender === 'male' ? 'मुलगा' : 'मुलगी'}
                 </span>
               </div>
 
               <div>
-                <h3 className="font-semibold text-blue-700 font-noto-devanagari mb-2">लोकप्रियता</h3>
-                <div className="flex items-center space-x-2">
-                  <TrendingUp className={`w-4 h-4 ${
-                    name.popularityTrend === 'rising' ? 'text-green-500' : 'text-yellow-500'
+                <h3 className="font-bold text-blue-100 font-noto-devanagari mb-3 text-lg">लोकप्रियता</h3>
+                <div className="flex items-center space-x-3">
+                  <TrendingUp className={`w-5 h-5 ${
+                    name.popularityTrend === 'rising' ? 'text-green-400' : 'text-yellow-400'
                   }`} />
-                  <span className="text-gray-700 font-noto-devanagari">
+                  <span className="text-white font-noto-devanagari text-lg">
                     {name.popularityTrend === 'rising' ? 'वाढत आहे' : 'स्थिर'}
                   </span>
                 </div>
@@ -123,33 +123,33 @@ const NameDetail = () => {
         {/* Detailed Information */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Cultural Information */}
-          <div className="bg-white rounded-2xl shadow-sm border border-blue-100 p-6">
-            <h2 className="text-xl font-bold text-blue-700 font-noto-devanagari mb-6 flex items-center">
-              <Crown className="w-5 h-5 mr-2" />
+          <div className="bg-white rounded-3xl shadow-xl border-2 border-blue-50 p-8">
+            <h2 className="text-2xl font-bold text-blue-800 font-noto-devanagari mb-8 flex items-center">
+              <Crown className="w-6 h-6 mr-3" />
               सांस्कृतिक माहिती
             </h2>
             
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div>
-                <h3 className="font-semibold text-gray-800 font-noto-devanagari mb-2">व्युत्पत्ती</h3>
-                <p className="text-gray-700 font-noto-devanagari">{name.etymology}</p>
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">व्युत्पत्ती</h3>
+                <p className="text-gray-700 font-noto-devanagari leading-relaxed">{name.etymology}</p>
               </div>
               
               <div>
-                <h3 className="font-semibold text-gray-800 font-noto-devanagari mb-2">सांस्कृतिक संदर्भ</h3>
-                <p className="text-gray-700 font-noto-devanagari">{name.culturalContext}</p>
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">सांस्कृतिक संदर्भ</h3>
+                <p className="text-gray-700 font-noto-devanagari leading-relaxed">{name.culturalContext}</p>
               </div>
               
               <div>
-                <h3 className="font-semibold text-gray-800 font-noto-devanagari mb-2">प्रादेशिक लोकप्रियता</h3>
-                <p className="text-gray-700 font-noto-devanagari">{name.regionalPopularity}</p>
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">प्रादेशिक लोकप्रियता</h3>
+                <p className="text-gray-700 font-noto-devanagari leading-relaxed">{name.regionalPopularity}</p>
               </div>
 
               <div>
-                <h3 className="font-semibold text-gray-800 font-noto-devanagari mb-2">टोपणनावे</h3>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">टोपणनावे</h3>
+                <div className="flex flex-wrap gap-3">
                   {name.nicknames.map((nickname, index) => (
-                    <span key={index} className="px-2 py-1 bg-blue-50 text-blue-600 rounded-lg text-sm font-noto-devanagari">
+                    <span key={index} className="px-4 py-2 bg-blue-100 text-blue-800 rounded-xl text-sm font-noto-devanagari font-medium">
                       {nickname}
                     </span>
                   ))}
@@ -159,54 +159,54 @@ const NameDetail = () => {
           </div>
 
           {/* Astrological Information */}
-          <div className="bg-white rounded-2xl shadow-sm border border-blue-100 p-6">
-            <h2 className="text-xl font-bold text-blue-700 font-noto-devanagari mb-6 flex items-center">
-              <Star className="w-5 h-5 mr-2" />
+          <div className="bg-white rounded-3xl shadow-xl border-2 border-yellow-50 p-8">
+            <h2 className="text-2xl font-bold text-yellow-700 font-noto-devanagari mb-8 flex items-center">
+              <Star className="w-6 h-6 mr-3" />
               ज्योतिषीय माहिती
             </h2>
             
-            <div className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-8">
+              <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <h3 className="font-semibold text-gray-800 font-noto-devanagari mb-2">अंकशास्त्र</h3>
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <span className="text-blue-600 font-bold text-lg">{name.numerology}</span>
+                  <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">अंकशास्त्र</h3>
+                  <div className="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center">
+                    <span className="text-yellow-700 font-bold text-2xl">{name.numerology}</span>
                   </div>
                 </div>
                 
                 <div>
-                  <h3 className="font-semibold text-gray-800 font-noto-devanagari mb-2">राशी</h3>
-                  <p className="text-gray-700 font-noto-devanagari bg-yellow-50 px-3 py-2 rounded-lg">
+                  <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">राशी</h3>
+                  <p className="text-gray-700 font-noto-devanagari bg-yellow-50 px-4 py-3 rounded-xl font-medium">
                     {name.rashi}
                   </p>
                 </div>
               </div>
               
               <div>
-                <h3 className="font-semibold text-gray-800 font-noto-devanagari mb-2">नक्षत्र</h3>
-                <p className="text-gray-700 font-noto-devanagari">{name.nakshatra}</p>
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">नक्षत्र</h3>
+                <p className="text-gray-700 font-noto-devanagari leading-relaxed">{name.nakshatra}</p>
               </div>
               
               <div>
-                <h3 className="font-semibold text-gray-800 font-noto-devanagari mb-2">अधिष्ठाता देवता</h3>
-                <p className="text-gray-700 font-noto-devanagari">{name.rulingDeity}</p>
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">अधिष्ठाता देवता</h3>
+                <p className="text-gray-700 font-noto-devanagari leading-relaxed">{name.rulingDeity}</p>
               </div>
             </div>
           </div>
 
           {/* Additional Information */}
-          <div className="bg-white rounded-2xl shadow-sm border border-blue-100 p-6">
-            <h2 className="text-xl font-bold text-blue-700 font-noto-devanagari mb-6 flex items-center">
-              <Calendar className="w-5 h-5 mr-2" />
+          <div className="bg-white rounded-3xl shadow-xl border-2 border-green-50 p-8">
+            <h2 className="text-2xl font-bold text-green-700 font-noto-devanagari mb-8 flex items-center">
+              <Calendar className="w-6 h-6 mr-3" />
               अतिरिक्त माहिती
             </h2>
             
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div>
-                <h3 className="font-semibold text-gray-800 font-noto-devanagari mb-2">भिन्न स्पेलिंग</h3>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">भिन्न स्पेलिंग</h3>
+                <div className="flex flex-wrap gap-3">
                   {name.variants.map((variant, index) => (
-                    <span key={index} className="px-2 py-1 bg-gray-50 text-gray-600 rounded-lg text-sm font-noto-sans">
+                    <span key={index} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-xl text-sm font-noto-sans font-medium">
                       {variant}
                     </span>
                   ))}
@@ -214,10 +214,10 @@ const NameDetail = () => {
               </div>
               
               <div>
-                <h3 className="font-semibold text-gray-800 font-noto-devanagari mb-2">समान नावे</h3>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">समान नावे</h3>
+                <div className="flex flex-wrap gap-3">
                   {name.similarNames.map((similar, index) => (
-                    <span key={index} className="px-2 py-1 bg-green-50 text-green-600 rounded-lg text-sm font-noto-devanagari">
+                    <span key={index} className="px-4 py-2 bg-green-100 text-green-700 rounded-xl text-sm font-noto-devanagari font-medium">
                       {similar}
                     </span>
                   ))}
@@ -225,10 +225,10 @@ const NameDetail = () => {
               </div>
               
               <div>
-                <h3 className="font-semibold text-gray-800 font-noto-devanagari mb-2">प्रसिद्ध व्यक्ती</h3>
-                <div className="space-y-2">
+                <h3 className="font-bold text-gray-800 font-noto-devanagari mb-3 text-lg">प्रसिद्ध व्यक्ती</h3>
+                <div className="space-y-3">
                   {name.notableBearers.map((bearer, index) => (
-                    <p key={index} className="text-gray-700 font-noto-devanagari text-sm">
+                    <p key={index} className="text-gray-700 font-noto-devanagari">
                       • {bearer}
                     </p>
                   ))}
@@ -238,13 +238,13 @@ const NameDetail = () => {
           </div>
 
           {/* Literary References */}
-          <div className="bg-white rounded-2xl shadow-sm border border-blue-100 p-6">
-            <h2 className="text-xl font-bold text-blue-700 font-noto-devanagari mb-6 flex items-center">
-              <BookOpen className="w-5 h-5 mr-2" />
+          <div className="bg-white rounded-3xl shadow-xl border-2 border-purple-50 p-8">
+            <h2 className="text-2xl font-bold text-purple-700 font-noto-devanagari mb-8 flex items-center">
+              <BookOpen className="w-6 h-6 mr-3" />
               साहित्यिक संदर्भ
             </h2>
             
-            <p className="text-gray-700 font-noto-devanagari">
+            <p className="text-gray-700 font-noto-devanagari leading-relaxed text-lg">
               {name.literaryReferences}
             </p>
           </div>
