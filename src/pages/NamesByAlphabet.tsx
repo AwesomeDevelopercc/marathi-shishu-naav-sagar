@@ -29,7 +29,7 @@ const NamesByAlphabet = () => {
             <Link
               key={alphabet.devanagari}
               to={`/alphabet/${alphabet.latin.toLowerCase()}`}
-              className="group bg-white hover:bg-blue-600 border-2 border-blue-100 hover:border-blue-600 rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
+              className="group bg-white hover:bg-blue-600 border-2 border-blue-100 hover:border-blue-600 rounded-2xl p-8 text-center transition-all duration-300 transform hover:-translate-y-1"
             >
               <div className="text-4xl font-bold text-blue-700 font-noto-devanagari mb-4 group-hover:text-white transition-colors">
                 {alphabet.devanagari}

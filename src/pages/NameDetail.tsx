@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -44,7 +43,7 @@ const NameDetail = () => {
         </div>
 
         {/* Name Header */}
-        <div className="bg-blue-600 rounded-3xl shadow-2xl p-12 mb-12 text-white">
+        <div className="bg-blue-600 rounded-3xl p-12 mb-12 text-white">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
             <div className="flex-1">
               <div className="flex items-center space-x-6 mb-6">
@@ -123,7 +122,7 @@ const NameDetail = () => {
         {/* Detailed Information */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Cultural Information */}
-          <div className="bg-white rounded-3xl shadow-xl border-2 border-blue-50 p-8">
+          <div className="bg-white rounded-3xl border-2 border-blue-50 p-8">
             <h2 className="text-2xl font-bold text-blue-800 font-noto-devanagari mb-8 flex items-center">
               <Crown className="w-6 h-6 mr-3" />
               सांस्कृतिक माहिती
@@ -159,7 +158,7 @@ const NameDetail = () => {
           </div>
 
           {/* Astrological Information */}
-          <div className="bg-white rounded-3xl shadow-xl border-2 border-yellow-50 p-8">
+          <div className="bg-white rounded-3xl border-2 border-yellow-50 p-8">
             <h2 className="text-2xl font-bold text-yellow-700 font-noto-devanagari mb-8 flex items-center">
               <Star className="w-6 h-6 mr-3" />
               ज्योतिषीय माहिती
@@ -195,7 +194,7 @@ const NameDetail = () => {
           </div>
 
           {/* Additional Information */}
-          <div className="bg-white rounded-3xl shadow-xl border-2 border-green-50 p-8">
+          <div className="bg-white rounded-3xl border-2 border-green-50 p-8">
             <h2 className="text-2xl font-bold text-green-700 font-noto-devanagari mb-8 flex items-center">
               <Calendar className="w-6 h-6 mr-3" />
               अतिरिक्त माहिती
@@ -238,7 +237,7 @@ const NameDetail = () => {
           </div>
 
           {/* Literary References */}
-          <div className="bg-white rounded-3xl shadow-xl border-2 border-purple-50 p-8">
+          <div className="bg-white rounded-3xl border-2 border-purple-50 p-8">
             <h2 className="text-2xl font-bold text-purple-700 font-noto-devanagari mb-8 flex items-center">
               <BookOpen className="w-6 h-6 mr-3" />
               साहित्यिक संदर्भ

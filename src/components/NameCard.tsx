@@ -14,7 +14,7 @@ const NameCard = ({ id, latin, devanagari, meaningMarathi, gender }: NameCardPro
   return (
     <Link 
       to={`/name/${id}`}
-      className="group block bg-white rounded-2xl shadow-lg hover:shadow-2xl border-2 border-blue-50 hover:border-blue-200 transition-all duration-300 p-8 transform hover:-translate-y-2"
+      className="group block bg-white rounded-2xl border-2 border-blue-50 hover:border-blue-200 transition-all duration-300 p-8 transform hover:-translate-y-2"
     >
       <div className="flex items-start justify-between mb-6">
         <div className="flex-1">

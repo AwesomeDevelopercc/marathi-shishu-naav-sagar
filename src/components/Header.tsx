@@ -7,12 +7,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-lg border-b-2 border-blue-100 sticky top-0 z-50">
+    <header className="bg-white border-b-2 border-blue-100 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center">
               <span className="text-white font-bold text-lg font-noto-devanagari">म</span>
             </div>
             <div className="flex flex-col">

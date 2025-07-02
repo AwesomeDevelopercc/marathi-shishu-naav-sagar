@@ -52,28 +52,28 @@ const Index = () => {
                 placeholder="नाव शोधा..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-16 pr-6 py-5 border-0 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-200 font-noto-devanagari text-lg shadow-xl bg-white"
+                className="w-full pl-16 pr-6 py-5 border-0 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-200 font-noto-devanagari text-lg bg-white"
               />
             </div>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-3xl shadow-xl">
+            <div className="bg-white p-8 rounded-3xl">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-blue-600" />
               </div>
               <div className="text-3xl font-bold text-blue-600 mb-2">{namesData.names.length}+</div>
               <div className="text-gray-600 font-noto-devanagari font-medium">एकूण नावे</div>
             </div>
-            <div className="bg-white p-8 rounded-3xl shadow-xl">
+            <div className="bg-white p-8 rounded-3xl">
               <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BookOpen className="w-8 h-8 text-yellow-600" />
               </div>
               <div className="text-3xl font-bold text-yellow-600 mb-2">२४+</div>
               <div className="text-gray-600 font-noto-devanagari font-medium">विविध अक्षरे</div>
             </div>
-            <div className="bg-white p-8 rounded-3xl shadow-xl">
+            <div className="bg-white p-8 rounded-3xl">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-green-600" />
               </div>
