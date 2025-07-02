@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'noto-sans': ['Noto Sans', 'sans-serif'],
+				'noto-devanagari': ['Noto Sans Devanagari', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +66,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'blue-50': '#E3F2FD',
+				'blue-100': '#BBDEFB',
+				'blue-200': '#90CAF9',
+				'blue-500': '#2196F3',
+				'blue-600': '#1976D2',
+				'blue-700': '#1565C0',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
